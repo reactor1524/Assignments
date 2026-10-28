@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertis Coding Club</title>
+
+    <style>
+        /* 1. CSS Variables */
+        :root {
+            --brand: #2f5bea;
+            --light: #eef2ff;
+            --dark: #1b2440;
+            --gap: 16px;
+        }
+
+        /* 2. Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 3. Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: var(--gap);
+        }
+
+        /* 4. Hero Section */
+        #hero {
+            background: var(--brand);
+            color: white;
+            text-align: center;
+            padding: 40px var(--gap);
+            border-radius: 12px;
+        }
+
+        #hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        #hero p {
+            font-size: 1.1rem;
+        }
+
+        /* 5. Reusable Card Class */
+        .card {
+            background: white;
+            padding: 24px;
+            margin-top: var(--gap);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+            color: var(--brand);
+        }
+
+        /* 6. Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+
+        th {
+            background: var(--brand);
+            color: white;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ccd3e5;
+        }
+
+        tbody tr:hover {
+            background: var(--light);
+        }
+
+        /* 7. Form Styling */
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccd3e5;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: 2px solid var(--brand);
+            border-color: var(--brand);
+        }
+
+        /* 8. Button Styling */
+        button {
+            background: var(--brand);
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #1b3fb8;
+        }
+
+        /* 9. Mobile Responsive Design */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            #hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .card {
+                padding: 14px;
+            }
+
+            th, td {
+                padding: 8px 5px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <h1>Invertis Coding Club</h1>
+        <p>Learn. Build. Share.</p>
+    </header>
+
+    <!-- Events Section -->
+    <main>
+        <section class="card">
+            <h2>Upcoming Events</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>HTML Workshop</td>
+                        <td>12 Nov</td>
+                        <td>Lab 1</td>
+                    </tr>
+
+                    <tr>
+                        <td>AI Hackathon</td>
+                        <td>20 Nov</td>
+                        <td>Seminar Hall</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Section -->
+        <section class="card">
+            <h2>Register for the Club</h2>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Register Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="text-align:center; padding:20px;">
+        <p>Created by Arun Maurya | B.Tech CSE (AI)</p>
+        <p>Invertis University, Bareilly</p>
+    </footer>
+
+</body>
+</html>
